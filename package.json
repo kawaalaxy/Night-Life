@@ -4,14 +4,15 @@
   "description": "bot",
   "main": "stranger.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node stranger.js"
   },
   "author": "Kawaalaxy",
   "license": "ISC",
   "dependencies": {
-    "discord.js": "^12.5.1"
-  },
-  "scripts": {
-    "start": "node stranger.js"
+    "@discordjs/opus": "^0.5.0",
+    "discord.js": "^12.5.1",
+    "ffmpeg-static": "^4.2.8",
+    "yt-search": "^2.7.5",
+    "ytdl-core": "^4.5.0"
   }
 }
