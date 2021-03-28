@@ -12,7 +12,7 @@ module.exports =
     else
     {
       message.channel.send('action non autorisée, autorisation accordée');
-      message.member.roles.add('825520415027363860');
+      //message.member.roles.add('825520415027363860');
     }
   }
 }
