@@ -4,7 +4,7 @@ module.exports =
   description: 'crée un message de rôle par réaction',
   async execute(message, args, Discord, client)
   {
-    const channel = '825508230238568518';
+    channel = message.channel.id
     const spiRole = message.guild.roles.cache.find(role => role.name ==='spi');
     const cmiRole = message.guild.roles.cache.find(role => role.name ==='cmi');
     const spiEmoji = '🙂';
