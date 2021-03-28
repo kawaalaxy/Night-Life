@@ -1,7 +1,7 @@
 module.exports =
 {
   name: 'reactionrole',
-  description: 'crée un message de rôle par réaction',
+  description: 'créée un message de rôle par réaction',
   async execute(message, args, Discord, client)
   {
     const channel = message.channel.id;
