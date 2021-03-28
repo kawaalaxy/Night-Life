@@ -4,7 +4,7 @@ module.exports =
   description: 'clear messages',
   async execute(message, args)
   {
-    if((!args[0]) || (isNaN(args[0])) || (args[0] > 1000) || (args[0] < 1))
+    if((!args[0]) || (isNaN(args[0])) || (args[0] > 1000) || (args[0] < 0))
     {
       return message.reply('Vous devez rentrer une valeur entre 0 et 1000');
     }
