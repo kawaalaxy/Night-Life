@@ -13,11 +13,7 @@ module.exports =
     {
       return message.channel.send('Vous devez être en vocal pour faire ça');
     }
-    if (!permission.has('SPEAK'))
-    {
-      return message.channel.send("Vous n'y êtes pas autorisé");
-    }
-    if (!args[0])
+    if (!args.length)
     {
       return message.channel.send('Rien à lancer');
     }
@@ -26,14 +22,14 @@ module.exports =
     const videoFinder = async (query) =>
     {
       const videoResult = await ytSearch(query);
-      return (videoResult.video.length > 1) ? videoResult.videos[0] : null;
+      return videoResult.videos[0]
     }
 
     const video = await videoFinder(args.join(' '));
     if (video)
     {
       const stream = ytdl(video.url, {filter: 'audioonly'});
-      connection.play(stream, {seek: 0, volume: 1})
+      connection.play(stream, {seek: 0, volume: 0.1})
       .on('finish', () =>
     {
       voiceChannel.leave();
