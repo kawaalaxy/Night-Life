@@ -7,7 +7,7 @@ module.exports =
     const modoRole = message.guild.roles.cache.find(role => role.name ==='modo');
     if(message.member.roles.cache.has(modoRole.id))
     {
-      if((!args[0]) || (isNaN(args[0])) || (args[0] > 1000) || (args[0] < 0))
+      if((isNaN(args[0])) || (args[0] > 1000) || (args[0] < 0))
       {
         return message.reply('Vous devez rentrer une valeur entre 0 et 1000');
       }

@@ -36,6 +36,10 @@ client.on('message', message =>
   }
   else if (command == 'clear')
   {
+    if (!args[0])
+    {
+      args = "1";
+    }
     client.commands.get('clear').execute(message, args);
   }
   else if (command == 'reactionrole')
