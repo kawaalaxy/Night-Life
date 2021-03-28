@@ -31,6 +31,14 @@ client.on('message', message =>
   {
     client.commands.get('quote').execute(message, args);
   }
+  else if (command == 'command')
+  {
+    client.commands.get('command').execute(message, args, Discord);
+  }
+  else if (command == 'clear')
+  {
+    client.commands.get('clear').execute(message, args);
+  }
 });
 
 
