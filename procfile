@@ -1,1 +1,1 @@
-worker: node stranger.js
+worker: node stranger.js 
