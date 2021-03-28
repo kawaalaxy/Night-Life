@@ -17,7 +17,7 @@ module.exports =
     {
       return message.channel.send("Vous n'y êtes pas autorisé");
     }
-    if (!args.length)
+    if (!args[0])
     {
       return message.channel.send('Rien à lancer');
     }
