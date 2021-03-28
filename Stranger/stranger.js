@@ -27,9 +27,9 @@ client.on('message', message =>
   {
     client.commands.get('ping').execute(message, args);
   }
-  else if (command == 'bonsoir')
+  else if (command == 'quote')
   {
-    message.channel.send('Bonsoir');
+    client.commands.get('quote').execute(message, args);
   }
 });
 
