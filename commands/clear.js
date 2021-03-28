@@ -5,7 +5,7 @@ module.exports =
   async execute(message, args)
   {
     const modoRole = message.guild.roles.cache.find(role => role.name ==='modo');
-    if(message.member.roles.cache.has('825520415027363860'))
+    if(message.member.roles.cache.has(modoRole))
     {
       if((!args[0]) || (isNaN(args[0])) || (args[0] > 1000) || (args[0] < 0))
       {
