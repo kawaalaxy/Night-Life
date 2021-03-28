@@ -19,7 +19,7 @@ client.on('message', message =>
 {
   if(!message.content.startsWith(prefix) || message.author.bot) return;
 
-  var args = message.content.slice(prefix.length).split(/ +/);
+  const args = message.content.slice(prefix.length).split(/ +/);
   const command = args.shift().toLowerCase();
 
   if(command === 'ping')
@@ -36,10 +36,6 @@ client.on('message', message =>
   }
   else if (command == 'clear')
   {
-    if (!args[0])
-    {
-      args = "1";
-    }
     client.commands.get('clear').execute(message, args);
   }
   else if (command == 'reactionrole')
