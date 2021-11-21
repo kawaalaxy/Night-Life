@@ -34,11 +34,9 @@ module.exports =
       const stream = ytdl(top.url, {filter: 'audioonly'});
       connection.play(stream, {seek: 0, volume: 0.1})
       .on('finish', () =>
-    {      }
-      if (queue.length == 0)
-      {
-        voiceChannel.leave();
-      }
+    {
+      voiceChannel.leave();
+    }
     });
     await message.reply(`Now Playing ***${video.title}***`)
     }
