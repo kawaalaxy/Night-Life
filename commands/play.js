@@ -32,9 +32,10 @@ module.exports =
       connection.play(stream, {seek: 0, volume: 0.1})
       .on('finish', () =>
     {
-      voiceChannel.leave();
+      message.reply(`***${video.title}*** fini`)
+      //voiceChannel.leave();
     });
-    await message.reply(`Now Playing ***${video.title}***`)
+    await message.reply(`C'est parti pour ***${video.title}***`)
     }
     else
     {
