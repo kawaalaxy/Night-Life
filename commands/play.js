@@ -1,6 +1,5 @@
 const ytdl = require('ytdl-core');
 const ytSearch = require('yt-search');
-var queue = [];
 
 module.exports =
 {
@@ -29,9 +28,7 @@ module.exports =
     const video = await videoFinder(args.join(' '));
     if (video)
     {
-      queue.push(video);
-      var top = queue.shift();
-      const stream = ytdl(top.url, {filter: 'audioonly'});
+      const stream = ytdl(video.url, {filter: 'audioonly'});
       connection.play(stream, {seek: 0, volume: 0.1})
       .on('finish', () =>
     {
