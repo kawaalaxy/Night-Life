@@ -1,5 +1,6 @@
 const ytdl = require('ytdl-core');
 const ytSearch = require('yt-search');
+var queue = [];
 
 module.exports =
 {
@@ -28,11 +29,19 @@ module.exports =
     const video = await videoFinder(args.join(' '));
     if (video)
     {
-      const stream = ytdl(video.url, {filter: 'audioonly'});
-      connection.play(stream, {seek: 0, volume: 0.1})
-      .on('finish', () =>
+      queue.push(video);
     {
-      voiceChannel.leave();
+      if (queue.length)
+      {
+        const top = queue.shift();
+        const stream = ytdl(top.url, {filter: 'audioonly'});
+        connection.play(stream, {seek: 0, volume: 0.1})
+        .on('finish', () =>
+      }
+      else
+      {
+        voiceChannel.leave();
+      }
     });
     await message.reply(`Now Playing ***${video.title}***`)
     }
