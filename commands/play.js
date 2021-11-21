@@ -30,14 +30,11 @@ module.exports =
     if (video)
     {
       queue.push(video);
-    {
-      if (queue.length != 0)
-      {
-        const top = queue.shift();
-        const stream = ytdl(top.url, {filter: 'audioonly'});
-        connection.play(stream, {seek: 0, volume: 0.1})
-        .on('finish', () =>
-      }
+      var top = queue.shift();
+      const stream = ytdl(top.url, {filter: 'audioonly'});
+      connection.play(stream, {seek: 0, volume: 0.1})
+      .on('finish', () =>
+    {      }
       if (queue.length == 0)
       {
         voiceChannel.leave();
