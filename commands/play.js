@@ -36,7 +36,6 @@ module.exports =
       .on('finish', () =>
     {
       voiceChannel.leave();
-    }
     });
     await message.reply(`Now Playing ***${video.title}***`)
     }
