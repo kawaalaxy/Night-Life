@@ -1,6 +1,6 @@
 const ytdl = require('ytdl-core');
 const ytSearch = require('yt-search');
-var en_cours = false;
+var queue = [];
 
 module.exports =
 {
@@ -33,7 +33,8 @@ module.exports =
       connection.play(stream, {seek: 0, volume: 0.1})
       .on('finish', () =>
     {
-      message.channel.send(`!play ***${video.title}***`)
+      message.channel.send(`!play ***${video.title}***`);
+      message.channel.send('!clear');
 
       //voiceChannel.leave();
     });
