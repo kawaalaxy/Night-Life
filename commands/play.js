@@ -34,7 +34,7 @@ module.exports =
       .on('finish', () =>
     {
       message.channel.send(`***${video.title}*** terminée`)
-      client.commands.get('play').execute('oui', `${video.title}`);
+      execute(message, `${video.title}`);
       //voiceChannel.leave();
     });
     await message.reply(`C'est parti pour ***${video.title}***`)
