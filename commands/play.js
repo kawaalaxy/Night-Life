@@ -31,14 +31,14 @@ module.exports =
     {
       queue.push(video);
     {
-      if (queue.length)
+      if (queue.length != 0)
       {
         const top = queue.shift();
         const stream = ytdl(top.url, {filter: 'audioonly'});
         connection.play(stream, {seek: 0, volume: 0.1})
         .on('finish', () =>
       }
-      else
+      if (queue.length == 0)
       {
         voiceChannel.leave();
       }
