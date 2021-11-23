@@ -26,6 +26,10 @@ client.on('message', message =>
   {
     client.commands.get('ping').execute(message, args);
   }
+  if(command === 'partie')
+  {
+    client.commands.get('partie').execute(message, args);
+  }
   else if (command == 'quote')
   {
     client.commands.get('quote').execute(message, args);
