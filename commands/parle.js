@@ -7,8 +7,8 @@ module.exports =
     const modoRole = message.guild.roles.cache.find(role => role.name ==='modo');
     if(message.member.roles.cache.has(modoRole.id))
     {
+      message.channel.bulkDelete(1);
       message.channel.send(args);
-      message.channel.send("!clear")
     }
     else
     {
