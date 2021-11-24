@@ -12,7 +12,7 @@ module.exports =
     }
     else
     {
-      return message.reply("vous n'avez pas l'autorisation de faire ceci")
+      return message.reply("ptdr t'as cru")
     }
   }
 }
