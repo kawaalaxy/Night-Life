@@ -4,7 +4,11 @@ module.exports =
   description: 'lance un dé',
   async execute(message, args)
   {
-    r = Math.random()*6;
+    if (!args[0])
+    {
+      args[0] = '6';
+    }
+    r = Math.random()*args[0];
     r = r - (r%1);
     message.channel.send(r);
   }
