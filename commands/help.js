@@ -14,7 +14,7 @@ module.exports =
         name: 'Fonctions disponibles pour la plèbe :', value: '.'
       },
       {
-        name: '!dé', value: 'jette un dé'
+        name: '!dé x', value: 'jette un dé à x faces'
       },
       {
         name: '!ping', value: 'pong'
