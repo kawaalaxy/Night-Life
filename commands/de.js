@@ -4,6 +4,6 @@ module.exports =
   description: 'lance un dé',
   async execute(message, args)
   {
-    message.channel.send(Math.random()*6 %1);
+    message.channel.send((Math.random()*6) %1);
   }
 }
