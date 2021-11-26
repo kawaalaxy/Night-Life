@@ -8,8 +8,14 @@ module.exports =
     .setColor('#304281')//hexcolor
     .setTitle('Help')
     .setURL('https://youtu.be/w0AOGeqOnFY')
-    .setDescription('Fonctions disponibles pour la plèbe')
+    .setDescription('Fonctions')
     .addFields(
+      {
+        name: 'Fonctions disponibles pour la plèbe', value: ''
+      },
+      {
+        name: '\u200B', value: '\u200B'
+      },
       {
         name: '!dé', value: 'jette un dé'
       },
