@@ -11,10 +11,7 @@ module.exports =
     .setDescription('Fonctions')
     .addFields(
       {
-        name: 'Fonctions disponibles pour la plèbe', value: '.'
-      },
-      {
-        name: '____', value: '____'
+        name: 'Fonctions disponibles pour la plèbe :', value: '.'
       },
       {
         name: '!dé', value: 'jette un dé'
@@ -24,6 +21,18 @@ module.exports =
       },
       {
         name: '!play nom de la vidéo', value: 'joue le son de la vidéo'
+      },
+      {
+        name: '!stop', value: 'fait quitter le vocal'
+      },
+      {
+        name: 'Fonctions disponibles pour les bg :', value: '.'
+      },
+      {
+        name: '!clear x', value: 'efface x messages'
+      },
+      {
+        name: '!parle message', value: 'dit le message'
       })
       //.setImage('')
       //.setFooter('');
