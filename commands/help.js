@@ -11,10 +11,10 @@ module.exports =
     .setDescription('Fonctions')
     .addFields(
       {
-        name: 'Fonctions disponibles pour la plèbe', value: ''
+        name: 'Fonctions disponibles pour la plèbe', value: ' '
       },
       {
-        name: '', value: ''
+        name: ' ', value: ' '
       },
       {
         name: '!dé', value: 'jette un dé'
