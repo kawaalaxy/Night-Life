@@ -30,9 +30,9 @@ client.on('message', message =>
   {
     client.commands.get('parle').execute(message, args);
   }
-  if(command === 'partie')
+  if(command === 'dé')
   {
-    client.commands.get('partie').execute(message, args);
+    client.commands.get('dé').execute(message, args);
   }
   else if (command == 'quote')
   {
