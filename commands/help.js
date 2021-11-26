@@ -14,7 +14,7 @@ module.exports =
         name: 'Fonctions disponibles pour la plèbe', value: ''
       },
       {
-        name: '\u200B', value: '\u200B'
+        name: '', value: ''
       },
       {
         name: '!dé', value: 'jette un dé'
