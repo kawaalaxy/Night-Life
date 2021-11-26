@@ -6,6 +6,6 @@ module.exports =
   {
     r = Math.random()*6;
     r = r - (r%1);
-    message.channel.send(r;
+    message.channel.send(r);
   }
 }
