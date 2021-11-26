@@ -23,7 +23,7 @@ module.exports =
         name: '!play nom de la vidéo', value: 'joue le son de la vidéo'
       },
       {
-        name: '!stop', value: 'fait quitter le vocal'
+        name: '!stop', value: 'quitte le vocal'
       }
       //,{
       //  name: 'Fonctions disponibles pour les bg :', value: '.'
