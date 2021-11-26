@@ -38,9 +38,9 @@ client.on('message', message =>
   {
     client.commands.get('quote').execute(message, args);
   }
-  else if (command == 'command')
+  else if (command == 'help')
   {
-    client.commands.get('command').execute(message, args, Discord);
+    client.commands.get('help').execute(message, args, Discord);
   }
   else if (command == 'clear')
   {
