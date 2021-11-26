@@ -24,16 +24,17 @@ module.exports =
       },
       {
         name: '!stop', value: 'fait quitter le vocal'
-      },
-      {
-        name: 'Fonctions disponibles pour les bg :', value: '.'
-      },
-      {
-        name: '!clear x', value: 'efface x messages'
-      },
-      {
-        name: '!parle message', value: 'dit le message'
-      })
+      }
+      //,{
+      //  name: 'Fonctions disponibles pour les bg :', value: '.'
+      //},
+      //{
+      //  name: '!clear x', value: 'efface x messages'
+      //},
+      //{
+      //  name: '!parle message', value: 'dit le message'
+      //}
+    )
       //.setImage('')
       //.setFooter('');
       message.channel.send(newEmbed);
