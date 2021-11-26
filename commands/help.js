@@ -6,9 +6,9 @@ module.exports =
   {
     const newEmbed = new Discord.MessageEmbed()
     .setColor('#304281')//hexcolor
-    .setTitle('Fonctions')
+    .setTitle('Help')
     .setURL('https://youtu.be/w0AOGeqOnFY')
-    .setDescription('Voici les fonctions')
+    .setDescription('Fonctions disponibles pour la plèbe')
     .addFields(
       {
         name: '!dé', value: 'jette un dé'
