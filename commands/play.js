@@ -18,7 +18,7 @@ module.exports =
     {
       return message.channel.send('Rien à lancer');
     }
-    console.log(message.member.voice);
+    console.log(message.member.voice.channel);
     const botRole = message.guild.roles.cache.find(role => role.name ==='bot');
     if( (message.member.roles.cache.has(botRole.id)) && (message.member.voice.channel.size == 1) )
     {
