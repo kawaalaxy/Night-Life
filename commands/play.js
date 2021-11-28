@@ -41,8 +41,15 @@ module.exports =
       connection.play(stream, {seek: 0, volume: 0.1})
       .on('finish', () =>
     {
-      message.channel.send(`!play ***${video.title}***`);
-      message.channel.send('!clear');
+      if (message.member.voice.channel.members.size != 1)
+      {
+        message.channel.send(`!play ***${video.title}***`);
+        message.channel.send('!clear');
+      }
+      else
+      {
+        console.log("était seul en vocal");
+      }
 
       //voiceChannel.leave();
     });
