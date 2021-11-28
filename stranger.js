@@ -30,17 +30,17 @@ client.on('message', message =>
   {
     client.commands.get('parle').execute(message, args);
   }
-  if(command === 'partie')
+  if(command === 'dé')
   {
-    client.commands.get('partie').execute(message, args);
+    client.commands.get('dé').execute(message, args);
   }
   else if (command == 'quote')
   {
     client.commands.get('quote').execute(message, args);
   }
-  else if (command == 'command')
+  else if (command == 'help')
   {
-    client.commands.get('command').execute(message, args, Discord);
+    client.commands.get('help').execute(message, args, Discord);
   }
   else if (command == 'clear')
   {
