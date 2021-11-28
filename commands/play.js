@@ -18,6 +18,7 @@ module.exports =
     {
       return message.channel.send('Rien à lancer');
     }
+    console.log('nombre de personnes en vocal :')
     console.log(message.member.voice.channel.members.size);
 
     const connection = await voiceChannel.join();
