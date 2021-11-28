@@ -12,5 +12,6 @@ module.exports =
     }
     await voiceChannel.leave();
     await message.channel.send("Très bien, je m'en vais");
+    await console.log("vocal quitté");
   }
 }

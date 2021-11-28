@@ -45,6 +45,7 @@ module.exports =
       {
         voiceChannel.leave();
         message.channel.send("Très bien, je m'en vais");
+        console.log("vocal quitté");
         console.log("était seul en vocal");
       }
 
