@@ -19,12 +19,20 @@ module.exports =
       return message.channel.send('Rien à lancer');
     }
 
+    const botRole = message.guild.roles.cache.find(role => role.name ==='bot');
+    if( (message.member.roles.cache.has(botRole.id)) && (message.member.voice.channel.size == 1) )
+    {
+      await voiceChannel.leave();
+      await message.channel.send("Très bien, je m'en vais");
+    }
+
     const connection = await voiceChannel.join();
     const videoFinder = async (query) =>
     {
       const videoResult = await ytSearch(query);
       return videoResult.videos[0]
     }
+
 
     const video = await videoFinder(args.join(' '));
     if (video)
