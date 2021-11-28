@@ -42,8 +42,8 @@ module.exports =
       }
       else
       {
-        await voiceChannel.leave();
-        await message.channel.send("Très bien, je m'en vais");
+        voiceChannel.leave();
+        message.channel.send("Très bien, je m'en vais");
         console.log("était seul en vocal");
       }
 
