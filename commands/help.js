@@ -37,6 +37,6 @@ module.exports =
     )
       //.setImage('')
       //.setFooter('');
-      message.channel.send(newEmbed);
+      message.author.send(newEmbed);
   }
 }
