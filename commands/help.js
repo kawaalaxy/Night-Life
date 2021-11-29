@@ -37,6 +37,7 @@ module.exports =
     )
       //.setImage('')
       //.setFooter('');
+      message.channel.bulkDelete(1);
       message.author.send(newEmbed);
   }
 }
