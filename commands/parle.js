@@ -8,7 +8,7 @@ module.exports =
     if(message.member.roles.cache.has(modoRole.id))
     {
       message.channel.bulkDelete(1);
-      message.channel.send(args);
+      message.channel.send(message.content.slice(prefix.length));
     }
     else
     {
