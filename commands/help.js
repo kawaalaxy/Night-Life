@@ -4,6 +4,8 @@ module.exports =
   description: "liste de fonctions",
   execute(message, args, Discord)
   {
+    console.log("a aidé ");
+    console.log(message.author.username);
     const newEmbed = new Discord.MessageEmbed()
     .setColor('#304281')//hexcolor
     .setTitle('Help')
