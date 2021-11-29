@@ -53,7 +53,7 @@ module.exports =
     });
     if (message.author.bot)
     {
-      await message.channel.send(`Et c'est reparti pour ***${video.title}***`)
+      await message.channel.send(`C'est parti pour ***${video.title}***`)
     }
     else
     {
