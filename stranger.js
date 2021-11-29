@@ -28,7 +28,7 @@ client.on('message', message =>
   }
   if(command === 'parle')
   {
-    client.commands.get('parle').execute(message, args, prefix);
+    client.commands.get('parle').execute(message, args);
   }
   if(command === 'dé')
   {
