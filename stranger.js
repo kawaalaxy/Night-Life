@@ -26,11 +26,11 @@ client.on('message', message =>
   {
     client.commands.get('ping').execute(message, args);
   }
-  if(command === 'parle')
+  else if(command === 'parle')
   {
     client.commands.get('parle').execute(message, args);
   }
-  if(command === 'dé')
+  else if(command === 'dé')
   {
     client.commands.get('dé').execute(message, args);
   }
@@ -41,6 +41,10 @@ client.on('message', message =>
   else if (command == 'help')
   {
     client.commands.get('help').execute(message, args, Discord);
+  }
+  else if (command == 'nez')
+  {
+    client.commands.get('nez').execute(message, args, Discord);
   }
   else if (command == 'clear')
   {
