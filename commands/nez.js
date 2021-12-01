@@ -5,7 +5,7 @@ module.exports =
   async execute(message, args)
   {
     var date = new Date();
-    var heure = date.getHours();
+    var heure = date.getHours() + 1;
     var minutes = date.getMinutes();
     if (heure == minutes)
     {
