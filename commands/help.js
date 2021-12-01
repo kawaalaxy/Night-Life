@@ -22,6 +22,9 @@ module.exports =
         name: '!ping', value: 'pong'
       },
       {
+        name: '!nez', value: 'LE nez'
+      },
+      {
         name: '!play nom de la vidéo', value: 'joue le son de la vidéo'
       },
       {
