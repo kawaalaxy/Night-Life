@@ -8,7 +8,7 @@ module.exports =
     {
       return message.reply("dis moi quoi choisir");
     }
-    r = Math.random()*6;
+    r = Math.random()*(liste_choix.length);
     r = r - (r%1);
     liste_choix = ["Certainement pas !" , "Demande à Benji" , "N'y compte pas" , "C'est certain" , "Quel beau temps aujourd'hui, tu ne trouves pas ?" , "Demande à Clément", "Demande à ta mère" , "oui.", "Demande à Romane", "mdr xD", "Carrément", "Demande à Diane"];
     console.log(r);
