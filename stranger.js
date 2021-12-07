@@ -46,6 +46,10 @@ client.on('message', message =>
   {
     client.commands.get('nez').execute(message, args, Discord);
   }
+  else if (command == 'choix')
+  {
+    client.commands.get('choix').execute(message, args, Discord);
+  }
   else if (command == 'clear')
   {
     client.commands.get('clear').execute(message, args);
