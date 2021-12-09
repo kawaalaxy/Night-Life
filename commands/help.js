@@ -51,6 +51,14 @@ module.exports =
       //.setImage('')
       //.setFooter('');
       message.channel.bulkDelete(1);
-      message.author.send(newEmbed);
+      if (args[0] == "ici")
+      {
+        message.channel.send(newEmbed)
+      }
+      else
+      {
+        message.author.send(newEmbed);
+      }
+
   }
 }
