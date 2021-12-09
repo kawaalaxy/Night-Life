@@ -20,7 +20,7 @@ client.on('message', message =>
 {
   if(!message.content.startsWith(prefix) /*|| message.author.bot*/)
   {
-    if (trn == 9 || !message.author.bot)
+    if (trn == 9 && !message.author.bot)
     {
       client.commands.get('tourne').execute(message);
     }
