@@ -17,7 +17,19 @@ client.once('ready', () =>
 
 client.on('message', message =>
 {
-  if(!message.content.startsWith(prefix) /*|| message.author.bot*/) return;
+  if(!message.content.startsWith(prefix) /*|| message.author.bot*/)
+  {
+    if (trn == 1)
+    {
+      client.command.get('tourne').execute();
+    }
+    else
+    {
+      trn = Math.random()*2;
+      trn = trn - (trn%1) + 1;
+      return;
+    }
+  }
 
   const args = message.content.slice(prefix.length).split(/ +/);
   const command = args.shift().toLowerCase();
