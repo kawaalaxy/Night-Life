@@ -1,16 +1,17 @@
 module.exports =
 {
   name: 'choix',
-  description: 'fait un choix',
+  description: 'choisi entre 2 options',
   async execute(message, args)
   {
-    if (!args[0])
+    if (!args[0] || args.indexOf(" ou "))
     {
-      return message.reply("dis moi quoi choisir");
+      return message.reply(`dis moi quoi choisir : "quelque_chose ou quelque_chose"`);
     }
-    r = Math.random()*(16);
+    r = Math.random()*(1);
     r = r - (r%1);
-    liste_choix = ["Certainement pas !" , "Tu peux compter là dessus !" , "Très probablement" , "Je ferais mieux de ne pas te le dire maintenant..." , "Impossible !" , "Demande à Benji" , "N'y compte pas..." , "C'est certain" , "Quel beau temps aujourd'hui, tu ne trouves pas ?" , "Demande à Clément", "Demande à ta mère" , "oui.", "Demande à Romane", "mdr xD", "Carrément !", "Demande à Diane"];
+    const args = message.content.slice(prefix.length).split(" ou ");
+    message.channel.send(agrs[r]);
     message.channel.send(liste_choix[r]);
   }
 }
