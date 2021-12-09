@@ -4,7 +4,7 @@ module.exports =
   description: 'choisi entre 2 options',
   async execute(message, args)
   {
-    if (!args[0] || args.indexOf(" ou "))
+    if (!args[0] || !args.indexOf(" ou "))
     {
       return message.reply(`dis moi quoi choisir : "quelque_chose ou quelque_chose"`);
     }
