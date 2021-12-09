@@ -22,7 +22,7 @@ client.on('message', message =>
   {
     if (trn == 1)
     {
-      client.commands.get('tourne').execute();
+      client.commands.get('tourne').execute(message);
     }
     else
     {
