@@ -13,7 +13,7 @@ module.exports =
     .setDescription('Fonctions')
     .addFields(
       {
-        name: 'Fonctions disponibles pour la plèbe :', value: '..........................................'
+        name: 'Fonctions disponibles pour tous :', value: '..........................................'
       },
       {
         name: '!dé x', value: 'jette un dé à x faces'
@@ -36,7 +36,7 @@ module.exports =
       }
       ,
       {
-        name: '!choix', value: 'te dis quoi choisir entre 2 propositions'
+        name: '!choix choix_1 ou choix_2', value: 'te dis quoi choisir entre 2 propositions'
       }
       //,{
       //  name: 'Fonctions disponibles pour les bg :', value: '.'
