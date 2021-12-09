@@ -11,6 +11,7 @@ module.exports =
     r = Math.random()*(1);
     r = r - (r%1);
     const reponse = message.content.slice(7).split(" ou ");
+    console.log(r);
     message.channel.send(reponse[r]);
   }
 }
