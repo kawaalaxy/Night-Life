@@ -30,6 +30,14 @@ module.exports =
       {
         name: '!stop', value: 'quitte le vocal'
       }
+      ,
+      {
+        name: '!dis', value: 'répond à ta question'
+      }
+      ,
+      {
+        name: '!choix', value: 'te dis quoi choisir entre 2 propositions'
+      }
       //,{
       //  name: 'Fonctions disponibles pour les bg :', value: '.'
       //},
