@@ -10,7 +10,7 @@ module.exports =
     }
     r = Math.random()*(1);
     r = r - (r%1);
-    const reponse = message.content.slice(prefix.length).split(" ou ");
+    const reponse = message.content.slice(1).split(" ou ");
     message.channel.send(reponse[r]);
   }
 }
