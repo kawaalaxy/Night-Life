@@ -8,7 +8,7 @@ module.exports =
     {
       return message.reply(`dis moi quoi choisir : "quelque_chose ou quelque_chose"`);
     }
-    r = Math.random()*(1);
+    r = Math.random()*(2);
     r = r - (r%1);
     const reponse = message.content.slice(7).split(" ou ");
     console.log(r);
