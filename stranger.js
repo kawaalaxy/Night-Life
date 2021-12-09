@@ -20,13 +20,13 @@ client.on('message', message =>
 {
   if(!message.content.startsWith(prefix) /*|| message.author.bot*/)
   {
-    if (trn == 1)
+    if (trn == 9 || !message.author.bot)
     {
       client.commands.get('tourne').execute(message);
     }
     else
     {
-      trn = Math.random()*2;
+      trn = Math.random()*100;
       trn = trn - (trn%1) + 1;
       return;
     }
