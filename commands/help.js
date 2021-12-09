@@ -32,11 +32,11 @@ module.exports =
       }
       ,
       {
-        name: '!dis', value: 'répond à ta question'
+        name: '!dis phrase/question', value: 'répond à ta question'
       }
       ,
       {
-        name: '!choix choix_1 ou choix_2', value: 'te dis quoi choisir entre 2 propositions'
+        name: '!choix choix_1 ou choix_2', value: 'te dit quoi choisir entre 2 propositions'
       }
       //,{
       //  name: 'Fonctions disponibles pour les bg :', value: '.'
