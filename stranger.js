@@ -26,7 +26,7 @@ client.on('message', message =>
     }
     else
     {
-      trn = Math.random()*20;
+      trn = Math.random()*50;
       trn = trn - (trn%1) + 1;
       return;
     }
