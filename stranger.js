@@ -69,7 +69,7 @@ client.on('message', message =>
   }
   else if (command == 'pokédex')
   {
-    client.commands.get('pokedex').execute(message, Discord);
+    client.commands.get('pokédex').execute(message, Discord);
   }
   else if (command == 'clear')
   {
