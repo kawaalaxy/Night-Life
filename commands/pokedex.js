@@ -6,7 +6,7 @@ module.exports =
   {
     r = Math.random()*898;
     r = r - (r%1) + 1;
-    fs.readFile('pokedex.txt', 'utf8', (err, data) =>{
+    fs.readFile('pokedex_bibli.txt', 'utf8', (err, data) =>{
       if (err){
         console.error(err);
         return;
