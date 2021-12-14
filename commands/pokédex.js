@@ -15,7 +15,8 @@ module.exports =
       }
       console.log(data);
     });
-    message.channel.send(`Ton pokémon est : ${data}`);
+    message.channel.send(`Ton pokémon est :`);
     console.log(process.cwd());
+    console.log(data);
   }
 }
