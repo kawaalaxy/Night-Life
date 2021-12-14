@@ -13,7 +13,7 @@ module.exports =
         return;
       }
       console.log(data);
-      lignes = data.split(\n);
+      lignes = data.split('\n');
       message.channel.send(`Ton pokémon est : #${r+1} ${lignes[r]}`);
     });
     console.log(process.cwd());
