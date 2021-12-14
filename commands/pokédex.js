@@ -1,5 +1,5 @@
 const fs = require('fs');
-
+var data = "";
 module.exports =
 {
   name: 'pokédex',
