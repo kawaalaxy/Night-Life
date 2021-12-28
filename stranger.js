@@ -3,6 +3,7 @@ const client = new Discord.Client({partials: ["MESSAGE", "CHANNEL", "REACTION"]}
 const prefix = '!';
 const fs = require('fs');
 trn = 0;
+let server = message.guild.id;
 client.commands = new Discord.Collection();
 const commandFiles = fs.readdirSync('./commands/').filter(file => file.endsWith('.js'));
 for(const file of commandFiles)
@@ -39,7 +40,7 @@ client.on('message', message =>
   {
     client.commands.get('ping').execute(message, args);
   }
-  else if(command === 'parle')
+  else if(command === 'parle' && server == "757635152175431810")
   {
     client.commands.get('parle').execute(message, args);
   }
@@ -47,11 +48,7 @@ client.on('message', message =>
   {
     client.commands.get('dé').execute(message, args);
   }
-  else if (command == 'quote')
-  {
-    client.commands.get('quote').execute(message, args);
-  }
-  else if (command == 'help')
+  else if (command == 'help' && server == "757635152175431810")
   {
     client.commands.get('help').execute(message, args, Discord);
   }
@@ -59,7 +56,7 @@ client.on('message', message =>
   {
     client.commands.get('nez').execute(message, args, Discord);
   }
-  else if (command == 'choix')
+  else if (command == 'choix' && server == "757635152175431810")
   {
     client.commands.get('choix').execute(message, args, Discord);
   }
@@ -71,11 +68,11 @@ client.on('message', message =>
   {
     client.commands.get('pokédex').execute(message, args, Discord);
   }
-  else if (command == 'clear')
+  else if (command == 'clear' && server == "757635152175431810")
   {
     client.commands.get('clear').execute(message, args);
   }
-  else if (command == 'reactionrole')
+  else if (command == 'reactionrole' && server == "757635152175431810")
   {
     client.commands.get('clear').execute(message, "1");
     client.commands.get('reactionrole').execute(message, args, Discord, client);
