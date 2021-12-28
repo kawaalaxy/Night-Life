@@ -3,7 +3,6 @@ const client = new Discord.Client({partials: ["MESSAGE", "CHANNEL", "REACTION"]}
 const prefix = '!';
 const fs = require('fs');
 trn = 0;
-let server = message.guild.id;
 client.commands = new Discord.Collection();
 const commandFiles = fs.readdirSync('./commands/').filter(file => file.endsWith('.js'));
 for(const file of commandFiles)
@@ -35,7 +34,7 @@ client.on('message', message =>
 
   const args = message.content.slice(prefix.length).split(/ +/);
   const command = args.shift().toLowerCase();
-
+  let server = message.guild.id;
   if(command === 'ping')
   {
     client.commands.get('ping').execute(message, args);
