@@ -55,7 +55,7 @@ client.on('message', message =>
   {
     client.commands.get('nez').execute(message, args, Discord);
   }
-  else if (command == 'choix' && server == "757635152175431810")
+  else if (command == 'choix')
   {
     client.commands.get('choix').execute(message, args, Discord);
   }
