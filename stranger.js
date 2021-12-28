@@ -88,6 +88,10 @@ client.on('message', message =>
   {
     client.commands.get('stop').execute(message, args);
   }
+  else if (command == 'test')
+  {
+    client.commands.get('test').execute(message, args);
+  }
 });
 
 
