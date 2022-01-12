@@ -3,6 +3,7 @@ const client = new Discord.Client({partials: ["MESSAGE", "CHANNEL", "REACTION"]}
 const prefix = '!';
 const fs = require('fs');
 trn = 0;
+liste = [];
 client.commands = new Discord.Collection();
 const commandFiles = fs.readdirSync('./commands/').filter(file => file.endsWith('.js'));
 for(const file of commandFiles)
@@ -78,7 +79,7 @@ client.on('message', message =>
   }
   else if (command == 'play')
   {
-    client.commands.get('play').execute(message, args);
+    client.commands.get('play').execute(message, args, liste);
   }
   else if (command == 'stop')
   {
