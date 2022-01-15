@@ -39,7 +39,7 @@ module.exports =
       liste.push(video);
     }
     console.log(liste);
-    if (message.author.bot)
+    if (message.author.bot || liste.length() == 1)
     {
       fist_video = liste.shift();
     }
