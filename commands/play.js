@@ -84,9 +84,9 @@ module.exports =
       await message.reply(`C'est parti pour ***${video.title}***`)
     }
     }
-    else
-    {
-      message.channel.send('Aucune vidéo trouvée');
-    }
+    //else
+    //{
+    //  message.channel.send('Aucune vidéo trouvée');
+    //}
   }
 }
