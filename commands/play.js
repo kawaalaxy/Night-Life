@@ -6,7 +6,7 @@ module.exports =
 {
   name: 'play',
   description: 'Rejoins et joue une vidéo',
-  async execute(message, args)
+  async execute(message, args, liste)
   {
     const voiceChannel = message.member.voice.channel;
 
@@ -30,6 +30,8 @@ module.exports =
 
 
     const video = await videoFinder(args.join(' '));
+    liste.push(video);
+    console.log(liste);
     if (video)
     {
       const stream = ytdl(video.url, {filter: 'audioonly'});
