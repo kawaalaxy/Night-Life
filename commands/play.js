@@ -1,6 +1,7 @@
 const ytdl = require('ytdl-core');
 const ytSearch = require('yt-search');
 var queue = [];
+first_video;
 
 module.exports =
 {
@@ -30,17 +31,25 @@ module.exports =
 
 
     const video = await videoFinder(args.join(' '));
-    liste.push(video);
-    console.log(liste);
-    if (video)
+    if (!message.author.bot)
     {
-      const stream = ytdl(video.url, {filter: 'audioonly'});
+      liste.push(video);
+    }
+    console.log(liste);
+    if (message.author.bot)
+    {
+      fist_video = liste.shift();
+    }
+
+    if (first_video && liste == [] || first_video && message.author.bot)
+    {
+      const stream = ytdl(first_video.url, {filter: 'audioonly'});
       connection.play(stream, {seek: 0, volume: 0.1})
       .on('finish', () =>
     {
-      if (message.member.voice.channel.members.size != 1)
+      if (message.member.voice.channel.members.size != 1 && liste != [])
       {
-        message.channel.send(`!play ***${video.title}***`);
+        message.channel.send(`!play ***${first_video.title}***`);
         message.channel.send('!clear');
       }
       else
@@ -48,7 +57,14 @@ module.exports =
         voiceChannel.leave();
         message.channel.send("Très bien, je m'en vais");
         console.log("vocal quitté");
-        console.log("était seul en vocal");
+        if (liste == [])
+        {
+          console.log("n'avait plus rien à mettre")
+        }
+        else
+        {
+          console.log("était seul en vocal");
+        }
       }
 
       //voiceChannel.leave();
