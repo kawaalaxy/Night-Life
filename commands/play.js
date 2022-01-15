@@ -47,8 +47,8 @@ module.exports =
       fist_video = liste[0];
       liste.shift();
     }
-
-    if (first_video && !liste.length || first_video && message.author.bot)
+    console.log(liste);
+    if ((first_video && !liste.length) || (first_video && message.author.bot))
     {
       const stream = ytdl(first_video.url, {filter: 'audioonly'});
       connection.play(stream, {seek: 0, volume: 0.1})
