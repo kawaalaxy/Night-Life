@@ -44,7 +44,8 @@ module.exports =
     console.log(liste);
     if (message.author.bot || liste.length == 1)
     {
-      fist_video = liste.shift();
+      fist_video = list[0];
+      liste.shift();
     }
 
     if (first_video && liste == [] || first_video && message.author.bot)
@@ -84,9 +85,9 @@ module.exports =
       await message.reply(`C'est parti pour ***${video.title}***`)
     }
     }
-    //else
-    //{
-    //  message.channel.send('Aucune vidéo trouvée');
-    //}
+    else
+    {
+      message.channel.send('Aucune vidéo trouvée');
+    }
   }
 }
