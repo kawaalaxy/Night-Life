@@ -44,7 +44,7 @@ module.exports =
     console.log(liste);
     if (message.author.bot || liste.length == 1)
     {
-      fist_video = list[0];
+      fist_video = liste[0];
       liste.shift();
     }
 
