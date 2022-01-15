@@ -38,6 +38,9 @@ module.exports =
     {
       liste.push(video);
     }
+    else {
+      liste.length;
+    }
     console.log(liste);
     if (message.author.bot || liste.length == 1)
     {
