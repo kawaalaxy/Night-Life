@@ -1,7 +1,7 @@
 const ytdl = require('ytdl-core');
 const ytSearch = require('yt-search');
 var queue = [];
-const first_video =  {
+var first_video =  {
   type: 'video',
   videoId: 'w0AOGeqOnFY',
 };
