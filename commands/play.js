@@ -41,7 +41,6 @@ module.exports =
     console.log(liste);
     if (message.author.bot || liste.length == 1)
     {
-      liste.shift();
       console.log(liste[0]);
       console.log(video);
     }
@@ -52,8 +51,9 @@ module.exports =
       connection.play(stream, {seek: 0, volume: 0.1})
       .on('finish', () =>
     {
-      if (message.member.voice.channel.members.size != 1 && liste != [])
+      if (message.member.voice.channel.members.size != 1 && liste.length > 1)
       {
+        liste.shift();
         message.channel.send(`!play ***${liste[0].title}***`);
         message.channel.send('!clear');
       }
