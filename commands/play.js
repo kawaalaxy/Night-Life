@@ -85,7 +85,15 @@ module.exports =
     }
     else
     {
-      message.channel.send('Aucune vidéo trouvée');
+      if (liste[0])
+      {
+        message.channel.send(`***${video.title}*** ajouté à la liste`)
+      }
+      else
+      {
+        message.channel.send('Aucune vidéo trouvée');
+      }
+
     }
   }
 }
