@@ -1,21 +1,6 @@
 const ytdl = require('ytdl-core');
 const ytSearch = require('yt-search');
 var queue = [];
-var first_video =  {
-  type: 'video',
-  videoId: 'w0AOGeqOnFY',
-  url: 'https://youtube.com/watch?v=w0AOGeqOnFY',
-  title: 'The Coconut Song - (Da Coconut Nut)',
-  description: '',
-  image: 'https://i.ytimg.com/vi/w0AOGeqOnFY/hqdefault.jpg',
-  thumbnail: 'https://i.ytimg.com/vi/w0AOGeqOnFY/hqdefault.jpg',
-  seconds: 215,
-  timestamp: '3:35',
-  duration: { toString: 23, seconds: 215, timestamp: '3:35' },
-  ago: '11 years ago',
-  views: 142231617,
-  author: { name: 'Jeff Lau', url: 'https://youtube.com/user/J3FFL4U' }
-};
 
 module.exports =
 {
@@ -50,26 +35,26 @@ module.exports =
       liste.push(video);
     }
     else {
-      liste.length;
+      console.log("author bot, liste.length :")
+      console.log(liste.length);
     }
     console.log(liste);
     if (message.author.bot || liste.length == 1)
     {
-      fist_video = liste[0];
       liste.shift();
-      console.log(first_video);
+      console.log(liste[0]);
       console.log(video);
     }
     console.log(liste);
-    if ((first_video && !liste.length) || (first_video && message.author.bot))
+    if ((liste[0] && !liste.length) || (liste[0] && message.author.bot))
     {
-      const stream = ytdl(first_video.url, {filter: 'audioonly'});
+      const stream = ytdl(liste[0].url, {filter: 'audioonly'});
       connection.play(stream, {seek: 0, volume: 0.1})
       .on('finish', () =>
     {
       if (message.member.voice.channel.members.size != 1 && liste != [])
       {
-        message.channel.send(`!play ***${first_video.title}***`);
+        message.channel.send(`!play ***${liste[0].title}***`);
         message.channel.send('!clear');
       }
       else
