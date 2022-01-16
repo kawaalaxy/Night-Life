@@ -11,7 +11,7 @@ var first_video =  {
   thumbnail: 'https://i.ytimg.com/vi/w0AOGeqOnFY/hqdefault.jpg',
   seconds: 215,
   timestamp: '3:35',
-  duration: { toString: [Function: toString], seconds: 215, timestamp: '3:35' },
+  duration: { toString: 23, seconds: 215, timestamp: '3:35' },
   ago: '11 years ago',
   views: 142231617,
   author: { name: 'Jeff Lau', url: 'https://youtube.com/user/J3FFL4U' }
