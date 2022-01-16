@@ -50,7 +50,7 @@ module.exports =
     console.log(liste);
     if ((first_video && !liste.length) || (first_video && message.author.bot))
     {
-      const stream = ytdl(video.url, {filter: 'audioonly'});
+      const stream = ytdl(first_video.url, {filter: 'audioonly'});
       connection.play(stream, {seek: 0, volume: 0.1})
       .on('finish', () =>
     {
