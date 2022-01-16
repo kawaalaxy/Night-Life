@@ -87,7 +87,7 @@ module.exports =
     {
       if (liste[0])
       {
-        message.channel.send(`***${video.title}*** ajouté à la liste`)
+        message.channel.send(`***${video.title}*** ajouté à la liste d'attente`)
       }
       else
       {
