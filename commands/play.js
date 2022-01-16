@@ -4,6 +4,17 @@ var queue = [];
 var first_video =  {
   type: 'video',
   videoId: 'w0AOGeqOnFY',
+  url: 'https://youtube.com/watch?v=w0AOGeqOnFY',
+  title: 'The Coconut Song - (Da Coconut Nut)',
+  description: '',
+  image: 'https://i.ytimg.com/vi/w0AOGeqOnFY/hqdefault.jpg',
+  thumbnail: 'https://i.ytimg.com/vi/w0AOGeqOnFY/hqdefault.jpg',
+  seconds: 215,
+  timestamp: '3:35',
+  duration: { toString: [Function: toString], seconds: 215, timestamp: '3:35' },
+  ago: '11 years ago',
+  views: 142231617,
+  author: { name: 'Jeff Lau', url: 'https://youtube.com/user/J3FFL4U' }
 };
 
 module.exports =
