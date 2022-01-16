@@ -46,6 +46,8 @@ module.exports =
     {
       fist_video = liste[0];
       liste.shift();
+      console.log(first_video);
+      console.log(video);
     }
     console.log(liste);
     if ((first_video && !liste.length) || (first_video && message.author.bot))
