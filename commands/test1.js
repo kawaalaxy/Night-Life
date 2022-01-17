@@ -4,7 +4,7 @@ module.exports =
   description: 'test',
   async execute(message, args, test_1)
   {
-    if (test1)
+    if (test_1)
     {
       console.log("test : ok");
       test_1 = 0;
