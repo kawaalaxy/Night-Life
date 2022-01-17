@@ -48,7 +48,7 @@ module.exports =
       console.log(liste[0]);
     }
     console.log(liste);
-    if ((liste[0] && liste.length == 1) || (liste[0] && message.author.bot) (liste[0] && skip))
+    if ((liste[0] && liste.length == 1) || (liste[0] && message.author.bot) || (liste[0] && skip))
     {
       const stream = ytdl(liste[0].url, {filter: 'audioonly'});
       connection.play(stream, {seek: 0, volume: 0.1})
