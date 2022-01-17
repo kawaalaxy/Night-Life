@@ -5,6 +5,7 @@ const fs = require('fs');
 trn = 0;
 liste = [];
 test_1 = 0;
+skip = 0;
 client.commands = new Discord.Collection();
 const commandFiles = fs.readdirSync('./commands/').filter(file => file.endsWith('.js'));
 for(const file of commandFiles)
@@ -80,11 +81,15 @@ client.on('message', message =>
   }
   else if (command == 'play')
   {
-    client.commands.get('play').execute(message, args, liste);
+    client.commands.get('play').execute(message, args, liste, skip);
   }
   else if (command == 'stop')
   {
     client.commands.get('stop').execute(message, args);
+  }
+  else if (command == 'skip')
+  {
+    client.commands.get('skip').execute(message, args, client.commands, liste);
   }
   else if (command == 'test')
   {

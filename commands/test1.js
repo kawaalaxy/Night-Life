@@ -12,7 +12,7 @@ module.exports =
     }
     else
     {
-      console.log("test :not ok");
+      console.log("test : not ok");
     }
   }
 }

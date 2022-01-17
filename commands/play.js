@@ -6,7 +6,7 @@ module.exports =
 {
   name: 'play',
   description: 'Rejoins et joue une vidéo',
-  async execute(message, args, liste)
+  async execute(message, args, liste, skip)
   {
     const voiceChannel = message.member.voice.channel;
 
@@ -34,6 +34,10 @@ module.exports =
     {
       liste.push(video);
     }
+    if (skip)
+    {
+      liste.shift();
+    }
     else {
       console.log("author bot, liste.length :")
       console.log(liste.length);
@@ -42,10 +46,9 @@ module.exports =
     if (message.author.bot || liste.length == 1)
     {
       console.log(liste[0]);
-      console.log(video);
     }
     console.log(liste);
-    if ((liste[0] && liste.length == 1) || (liste[0] && message.author.bot))
+    if ((liste[0] && liste.length == 1) || (liste[0] && message.author.bot) (liste[0] && skip))
     {
       const stream = ytdl(liste[0].url, {filter: 'audioonly'});
       connection.play(stream, {seek: 0, volume: 0.1})
@@ -54,6 +57,7 @@ module.exports =
       if (message.member.voice.channel.members.size != 1 && liste.length > 1)
       {
         liste.shift();
+        skip = 0;
         message.channel.send(`!play ***${liste[0].title}***`);
         message.channel.send('!clear');
       }
