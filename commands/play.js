@@ -30,7 +30,7 @@ module.exports =
 
 
     const video = await videoFinder(args.join(' '));
-    if (!message.author.bot)
+    if (!message.author.bot && !skip)
     {
       liste.push(video);
     }
