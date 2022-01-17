@@ -8,7 +8,6 @@ module.exports =
     {
       console.log("test : ok");
       test_1 = 0;
-      return 1;
     }
     else
     {
