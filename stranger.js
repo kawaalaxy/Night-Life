@@ -92,11 +92,11 @@ client.on('message', message =>
   }
   else if (command == 'test1')
   {
-    client.commands.get('test1').execute(message, args);
+    client.commands.get('test1').execute(message, args, test_1);
   }
   else if (command == 'test2')
   {
-    client.commands.get('test2').execute(message, args, test_1);
+    client.commands.get('test2').execute(message, args, client.commands);
   }
 });
 
