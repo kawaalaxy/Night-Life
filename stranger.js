@@ -4,6 +4,7 @@ const prefix = '!';
 const fs = require('fs');
 trn = 0;
 liste = [];
+test_1 = 0;
 client.commands = new Discord.Collection();
 const commandFiles = fs.readdirSync('./commands/').filter(file => file.endsWith('.js'));
 for(const file of commandFiles)
@@ -88,6 +89,14 @@ client.on('message', message =>
   else if (command == 'test')
   {
     client.commands.get('test').execute(message, args);
+  }
+  else if (command == 'test1')
+  {
+    client.commands.get('test1').execute(message, args);
+  }
+  else if (command == 'test2')
+  {
+    client.commands.get('test2').execute(message, args, test_1);
   }
 });
 
