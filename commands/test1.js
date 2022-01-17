@@ -8,9 +8,11 @@ module.exports =
     {
       console.log("test : ok");
       test_1 = 0;
+      return 1;
     }
     else
     {
       console.log("test :not ok");
     }
   }
+}

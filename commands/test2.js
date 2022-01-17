@@ -6,3 +6,4 @@ module.exports =
   {
     client.commands.get('test1').execute(message, args, 1);
   }
+}
