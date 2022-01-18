@@ -66,14 +66,7 @@ module.exports =
         voiceChannel.leave();
         message.channel.send("Très bien, je m'en vais");
         console.log("vocal quitté");
-        if (liste == [])
-        {
-          console.log("n'avait plus rien à mettre")
-        }
-        else
-        {
-          console.log("était seul en vocal");
-        }
+        liste = [];
       }
 
       //voiceChannel.leave();
@@ -90,7 +83,7 @@ module.exports =
       }
       else
       {
-        message.channel.send("morceau passé");  
+        message.channel.send("morceau passé");
       }
     }
     }
