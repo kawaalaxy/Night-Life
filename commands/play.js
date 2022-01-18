@@ -63,10 +63,10 @@ module.exports =
       }
       else
       {
+        liste.shift();
         voiceChannel.leave();
         message.channel.send("Très bien, je m'en vais");
         console.log("vocal quitté");
-        liste = [];
       }
 
       //voiceChannel.leave();
