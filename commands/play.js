@@ -84,7 +84,10 @@ module.exports =
     }
     else
     {
-      await message.reply(`C'est parti pour ***${video.title}***`)
+      if (!skip)
+      {
+        await message.reply(`C'est parti pour ***${video.title}***`)  
+      }
     }
     }
     else
