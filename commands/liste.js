@@ -11,11 +11,11 @@ module.exports =
     else
     {
       result = []
-      for (var i = 0; i < liste.length; i++) {
+      for (var i = 0; i < liste.length; i++)
+      {
         result.push(liste[i].title);
       }
       message.channel.send(result);
-    }
     }
   }
 }
