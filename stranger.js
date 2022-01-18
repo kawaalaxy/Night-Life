@@ -85,7 +85,7 @@ client.on('message', message =>
   }
   else if (command == 'stop')
   {
-    client.commands.get('stop').execute(message, args);
+    client.commands.get('stop').execute(message, args, liste);
   }
   else if (command == 'skip')
   {
