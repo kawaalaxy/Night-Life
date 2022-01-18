@@ -8,6 +8,6 @@ module.exports =
     for (var i = 0; i < liste.length; i++) {
       result.push(liste[i].title);
     }
-    message.channel.send(liste);
+    message.channel.send(result);
   }
 }
