@@ -91,6 +91,10 @@ client.on('message', message =>
   {
     client.commands.get('skip').execute(message, args, client.commands, liste);
   }
+  else if (command == 'liste')
+  {
+    client.commands.get('liste').execute(message, liste);
+  }
   else if (command == 'test')
   {
     client.commands.get('test').execute(message, args);
