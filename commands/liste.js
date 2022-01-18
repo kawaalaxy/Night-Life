@@ -13,7 +13,7 @@ module.exports =
       result = []
       for (var i = 0; i < liste.length; i++)
       {
-        result.push(`1 : ${liste[i].title}`);
+        result.push(`${i+1} : ${liste[i].title}`);
       }
       message.channel.send(result);
     }
