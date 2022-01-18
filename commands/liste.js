@@ -4,7 +4,7 @@ module.exports =
   description: "affiche la liste d'attente",
   async execute(message, liste)
   {
-    if (liste = [])
+    if (liste == [])
     {
       message.channel.send("la liste est vide")
     }
