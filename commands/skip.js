@@ -4,6 +4,6 @@ module.exports =
   description: 'passe au morceau suivant',
   async execute(message, args, commandes, liste)
   {
-    commandes.get('play').execute(message, args, liste, 1);
+    commandes.get('play').execute(message, ["coconut", "song"], liste, 1);
   }
 }
