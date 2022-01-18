@@ -11,7 +11,7 @@ module.exports =
       return message.channel.send('vous devez être en vocal pour faire ça');
     }
     await voiceChannel.leave();
-    liste = [];
+    liste.shift();
     await message.channel.send("Très bien, je m'en vais");
     await console.log("vocal quitté");
   }
