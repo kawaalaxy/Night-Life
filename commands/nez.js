@@ -28,7 +28,7 @@ module.exports =
       {
         if (liste_nez)
         {
-          while (i < liste_nez.length || liste_nez[i][0] == message.author.username)
+          while (i < liste_nez.length && ( !(liste_nez[i][0] == message.author.username)))
           {
             i = i + 1;
           }
