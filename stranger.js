@@ -4,6 +4,7 @@ const prefix = '!';
 const fs = require('fs');
 trn = 0;
 liste = [];
+liste_nez = [];
 test_1 = 0;
 skip = 0;
 client.commands = new Discord.Collection();
@@ -56,7 +57,7 @@ client.on('message', message =>
   }
   else if (command == 'nez')
   {
-    client.commands.get('nez').execute(message, args, Discord);
+    client.commands.get('nez').execute(message, args, liste_nez, Discord);
   }
   else if (command == 'choix')
   {

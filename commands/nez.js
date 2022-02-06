@@ -2,15 +2,42 @@ module.exports =
 {
   name: 'nez',
   description: 'LE nez',
-  async execute(message, args)
+  async execute(message, args, liste_nez)
   {
-    var date = new Date();
-    var heure = date.getHours() + 1;
-    var minutes = date.getMinutes();
-    if (heure == minutes)
+    if (args[0])
     {
-      return message.reply("Bravo !");
+      if (args[0] == "liste")
+      {
+        if (!liste_nez[0])
+        {
+          message.channel.send("la liste est vide")
+        }
+        else
+        {
+          message.channel.send(liste_nez);
+        }
+      }
     }
-    return message.reply(`Dommage il est ${heure}h${minutes} !`);
+    else
+    {
+      var date = new Date();
+      var heure = (date.getHours() + 1) % 24;
+      var minutes = (date.getHours() + 1) % 24;//date.getMinutes();
+      var i = 0;
+      if (heure == minutes)
+      {
+        while (i < liste_nez || liste_nez[i][0] == message.author.username)
+        {
+          i = i + 1;
+        }
+        if (i < liste_nez)
+        {
+          liste_nez.push([message.author.username, 0])
+        }
+        liste_nez[i][1] = liste_nez[i][1] + 1;
+        return message.reply("Bravo !");
+      }
+      return message.reply(`Dommage il est ${heure}h${minutes} !`);
+    }
   }
 }
