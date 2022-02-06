@@ -26,11 +26,14 @@ module.exports =
       var i = 0;
       if (heure == minutes)
       {
-        while (i < liste_nez || liste_nez[i][0] == message.author.username)
+        if (liste_nez)
         {
-          i = i + 1;
+          while (i < liste_nez.length || liste_nez[i][0] == message.author.username)
+          {
+            i = i + 1;
+          }
         }
-        if (i < liste_nez)
+        if (i == liste_nez.length)
         {
           liste_nez.push([message.author.username, 0])
         }
