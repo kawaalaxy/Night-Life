@@ -17,7 +17,7 @@ module.exports =
           var liste_f = []
           for (var i = 0; i < liste_nez.length; i++)
           {
-            liste_f.push(liste_nez[i][0].concat' -> ', liste_nez[i][1].toString(), ' nez\\n');
+            liste_f.push((liste_nez[i][0]).concat' -> ', (liste_nez[i][1]).toString(), ' nez\\n');
           }
           message.channel.send(liste_f);
         }
