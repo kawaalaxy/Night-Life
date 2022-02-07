@@ -14,7 +14,12 @@ module.exports =
         }
         else
         {
-          message.channel.send(liste_nez);
+          var liste_f = []
+          for (var i = 0; i < liste_nez.length; i++)
+          {
+            liste_f.push(liste_nez[i][0].concat' -> ', liste_nez[i][1].toString(), ' nez\\n');
+          }
+          message.channel.send(liste_f);
         }
       }
     }
@@ -22,7 +27,7 @@ module.exports =
     {
       var date = new Date();
       var heure = (date.getHours() + 1) % 24;
-      var minutes = date.getMinutes();
+      var minutes = //date.getMinutes();
       var i = 0;
       if (heure == minutes)
       {
