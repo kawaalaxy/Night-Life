@@ -59,6 +59,10 @@ client.on('message', message =>
   {
     client.commands.get('nez').execute(message, args, liste_nez, Discord);
   }
+  else if (command == 'edt')
+  {
+    client.commands.get('edt').execute(message, args, Discord);
+  }
   else if (command == 'choix')
   {
     client.commands.get('choix').execute(message, args, Discord);
