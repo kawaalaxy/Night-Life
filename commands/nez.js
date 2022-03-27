@@ -21,7 +21,7 @@ module.exports =
     else
     {
       var date = new Date();
-      var heure = (date.getHours() + 1) % 24;
+      var heure = (date.getHours() + 2) % 24;
       var minutes = date.getMinutes();//date.getMinutes();
       var i = 0;
       if (heure == minutes)
