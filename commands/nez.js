@@ -14,7 +14,10 @@ module.exports =
         }
         else
         {
-          message.channel.send(liste_nez);
+          for (var i = 0; i < liste_nez.length - 1; i++)
+          {
+            message.channel.send(liste_nez[i][0] + ": " + liste_nez[i][t]);
+          }
         }
       }
     }
