@@ -27,7 +27,7 @@ module.exports =
       var heure = (date.getHours() + 2) % 24;
       var minutes = date.getMinutes();//date.getMinutes();
       var i = 0;
-      if (heure == minutes)
+      if (minutes == minutes)//heure = minutes
       {
         if (liste_nez)
         {
