@@ -14,12 +14,14 @@ module.exports =
         }
         else
         {
+          liste_string = ""
           for (var i = 0; i < liste_nez.length; i++)
           {
             console.log("repère 1")
-            message.channel.send(liste_nez[i][0] + ": " + liste_nez[i][1]);
+            liste_string = liste_nez[i][0] + ": " + liste_nez[i][1] + "\n";
             console.log("repère 2")
           }
+          message.channel.send(liste_string);
         }
       }
     }
