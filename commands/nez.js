@@ -45,6 +45,7 @@ module.exports =
           }
         }
         liste_nez[i][1] = liste_nez[i][1] + 1;
+        liste_nez[i][2] = date;
         return message.reply("Bravo !");
       }
       return message.reply(`Dommage il est ${heure}h${minutes} !`);
