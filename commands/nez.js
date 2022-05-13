@@ -24,7 +24,7 @@ module.exports =
       var heure = (date.getHours() + 2) % 24;
       var minutes = date.getMinutes();//date.getMinutes();
       var i = 0;
-      if (heure == heure)//heure == minutes
+      if (heure == minutes)
       {
         if (liste_nez)
         {
@@ -39,7 +39,7 @@ module.exports =
         }
         else
         {
-          if ((heure == (date.getHours() + 2) % 24) && (liste_nez[i][2].getDate() == date.getDate()))
+          if ((heure == (liste_nez[i][2].getHours() + 2) % 24) && (liste_nez[i][2].getDate() == date.getDate()))
           {
             return message.reply("Tu as déjà fait le nez pour cette heure !");
           }
