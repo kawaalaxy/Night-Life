@@ -14,7 +14,7 @@ module.exports =
         }
         else
         {
-          for (var i = 0; i < liste_nez.length - 1; i++)
+          for (var i = 0; i < liste_nez.length; i++)
           {
             message.channel.send(liste_nez[i][0] + ": " + liste_nez[i][t]);
           }
