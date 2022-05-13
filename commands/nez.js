@@ -35,7 +35,14 @@ module.exports =
         }
         if (i == liste_nez.length)
         {
-          liste_nez.push([message.author.username, 0])
+          liste_nez.push([message.author.username, 0, date])
+        }
+        else
+        {
+          if (heure == (date.getHours() + 2) % 24 && liste_nez[i][2].getDate() == date.getDate())
+          {
+            return message.reply("Tu as déjà fait le nez pour cette heure !");
+          }
         }
         liste_nez[i][1] = liste_nez[i][1] + 1;
         return message.reply("Bravo !");
