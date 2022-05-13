@@ -17,7 +17,7 @@ module.exports =
           for (var i = 0; i < liste_nez.length; i++)
           {
             console.log("repère 1")
-            message.channel.send(liste_nez[i][0] + ": " + liste_nez[i][t]);
+            message.channel.send(liste_nez[i][0] + ": " + liste_nez[i][1]);
             console.log("repère 2")
           }
         }
